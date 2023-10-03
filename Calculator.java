@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Stack;
 
 public class Calculator implements Strategy {
+
+    // public pattern Singleton() {
     private static Calculator instance;
 
     private Calculator() {}
@@ -13,6 +15,7 @@ public class Calculator implements Strategy {
         }
         return instance;
     }
+    // }
 
     // This method gets an expression and outputs the anwer by using method evaluateExpression
     @Override
