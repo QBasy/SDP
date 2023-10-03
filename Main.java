@@ -1,9 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Calculator calculator = Calculator.getInstance();
+        MainCalculator calculator = MainCalculator.getInstance();
+        calculator.setStrategy(new Calculator());
 
-        calculator.writeAnswer("25+14+2+1/2");
-
-        //OUTPUT IS 21.0))))
+        calculator.solveExpression("25+2+4+5+2*2/12");
     }
 }

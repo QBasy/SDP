@@ -4,19 +4,6 @@ import java.util.Stack;
 
 public class Calculator implements Strategy {
 
-    // public pattern Singleton() {
-    private static Calculator instance;
-
-    private Calculator() {}
-
-    public static Calculator getInstance() {
-        if (instance == null) {
-            instance = new Calculator();
-        }
-        return instance;
-    }
-    // }
-
     // This method gets an expression and outputs the anwer by using method evaluateExpression
     @Override
     public double writeAnswer(String expression) {
