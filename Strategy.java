@@ -1,4 +1,4 @@
 public interface Strategy {
 
-    void solve(String expression);
+    void writeAnswer(String expression);
 }
