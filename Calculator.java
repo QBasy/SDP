@@ -6,10 +6,6 @@ import java.util.Stack;
 public class Calculator implements Strategy {
     private static Calculator instance;
 
-    private ArrayList<Double> previous;
-
-    private int prevCount = 0;
-
     private Calculator() {}
 
     public static Calculator getInstance() {
@@ -19,17 +15,19 @@ public class Calculator implements Strategy {
         return instance;
     }
 
+    // This method gets an expression and outputs the anwer by using method evaluateExpression
     @Override
     public void writeAnswer(String expression) {
         try {
-            double result = evaluatedExpression(expression);
+            double result = evaluateExpression(expression);
             System.out.println(expression + " = " + result);
         } catch (IllegalArgumentException error) {
             System.out.println("WRONG EXPRESSION!!!");
         }
     }
 
-    private double evaluatedExpression(String expression) {
+    // This method is evaluating whole expression and giving result to writeAnswer()
+    private double evaluateExpression(String expression) {
         Stack<Double> digits = new Stack<>();
         Stack<Character> operators = new Stack<>();
         List<Character> validOperators = Arrays.asList('+','-','*','/');
