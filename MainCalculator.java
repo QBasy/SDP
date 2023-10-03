@@ -16,6 +16,6 @@ public class MainCalculator {
     }
 
     public void solveExpression(String expression) {
-        System.out.println(expression + "=" + strategy.writeAnswer(expression));
+        System.out.println(expression + " = " + strategy.writeAnswer(expression));
     }
 }
