@@ -19,13 +19,14 @@ public class Calculator implements Strategy {
 
     // This method gets an expression and outputs the anwer by using method evaluateExpression
     @Override
-    public void writeAnswer(String expression) {
+    public double writeAnswer(String expression) {
         try {
             double result = evaluateExpression(expression);
-            System.out.println(expression + " = " + result);
+            return result;
         } catch (IllegalArgumentException error) {
             System.out.println("WRONG EXPRESSION!!!");
         }
+        return 0;
     }
 
     // This method is evaluating whole expression and giving result to writeAnswer()
