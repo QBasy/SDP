@@ -3,5 +3,7 @@ public class Main {
         Calculator calculator = Calculator.getInstance();
 
         calculator.writeAnswer("25+14+2+1/2");
+
+        //OUTPUT IS 21.0))))
     }
 }
