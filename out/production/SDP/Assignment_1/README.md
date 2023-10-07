@@ -21,7 +21,10 @@ public interface Strategy {
     double writeAnswer(String expression);
 }
 ```
+
 ```java
+import Assignment_1.Strategy;
+
 public class MainCalculator {
     private Strategy strategy;
 
