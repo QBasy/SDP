@@ -1,3 +1,5 @@
+package Assignment_1;
+
 public class MainCalculator {
     private static MainCalculator instance;
     private Strategy strategy;
