@@ -4,6 +4,7 @@ public class Car implements CarDecorator{
     private String carMark;
     private String carModel;
     private String carNumber;
+    private boolean carStatus = false;
 
     public Car(String carMark, String carModel, String carNumber) {
         this.carMark = carMark;
@@ -11,16 +12,44 @@ public class Car implements CarDecorator{
         this.carNumber = carNumber;
     }
 
-    public void drive() {
-        System.out.println("\uD83D\uDE97 is Driving away!");
+    public void turnCarOn() {
+        if (carStatus == false) {
+            carStatus = true;
+        } else {
+            System.out.println(carMark + " " + carModel + " is Already Turned On");
+        }
     }
 
-    public void writeCarDescription() {
-        System.out.println("Mark is " + carMark + ", model is " + carModel + " and number is " + carNumber + "!!!");
+    public void turnCarOff() {
+        if (carStatus == true) {
+            carStatus = false;
+        } else {
+            System.out.println(carMark + " " + carModel + " is Already Turned Off");
+        }
     }
 
     @Override
-    public String carDescription(Car car) {
-        return null;
+    public void carDrive() {
+        if (carStatus) {
+            System.out.println("Car is Driving away!");
+        } else {
+            System.out.println("First Turn Car On");
+        }
+    }
+
+    public String carDescription() {
+        return "Mark is " + carMark + ", model is " + carModel + " and number is " + carNumber + "!!!";
+    }
+
+    public String getCarMark() {
+        return carMark;
+    }
+
+    public String getCarModel() {
+        return carModel;
+    }
+
+    public String getCarNumber() {
+        return carNumber;
     }
 }
