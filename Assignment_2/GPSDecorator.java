@@ -1,29 +1,17 @@
 package Assignment_2;
 
-public class GPSDecorator implements CarDecorator {
-    private Car car;
-
+public class GPSDecorator extends CarDecorator {
     public GPSDecorator(Car car) {
-        this.car = car;
+        super(car);
     }
 
     @Override
-    public void turnCarOn() {
-        car.turnCarOn();
+    public String getDescription() {
+        return super.getDescription() + ", GPS";
     }
 
     @Override
-    public void turnCarOff() {
-        car.turnCarOff();
-    }
-
-    @Override
-    public void carDrive() {
-        car.carDrive();
-    }
-
-    @Override
-    public String carDescription() {
-        return car.carDescription();
+    public double getCost() {
+        return super.getCost() + 500.0;
     }
 }
