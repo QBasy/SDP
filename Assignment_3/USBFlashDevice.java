@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class USBFlashDevice implements USB {
     private String USBName;
-    private String[] Memory;
+    private String[] Memory = new String[64];
 
     public USBFlashDevice(String USBName) {
         this.USBName = USBName;
@@ -22,7 +22,10 @@ public class USBFlashDevice implements USB {
 
     public void readData() {
         for (int i = 0; i < Memory.length; i++) {
-            System.out.println(i + " " + Memory[i]);
+            if (Memory[i] == null) {
+                break;
+            }
+            System.out.println(i+1 + ". " + Memory[i]);
         }
     }
 }

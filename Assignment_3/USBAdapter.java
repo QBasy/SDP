@@ -8,7 +8,7 @@ public class USBAdapter implements USB {
 
     @Override
     public void connectToUSB() {
-        System.out.println("Adapter: Converting OtherDevice connection to USB.");
+        System.out.println("Adapter converting cable connection to USB.");
         anotherDevice.connectDevice();
     }
 
