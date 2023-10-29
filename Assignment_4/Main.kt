@@ -3,20 +3,28 @@ package Assignment_4
 
 fun main(args: Array<String>) {
     val humanFactory = HumanFactory()
+    val workObserver = WorkObserver()
 
     val driver = humanFactory.createHuman("Driver")
-    driver.introduction()
-    driver.work()
+    println( driver.introduction())
+    driver.registerObserver(workObserver)
+    println(driver.work())
+    driver.notifyObservers()
 
     val cook = humanFactory.createHuman("Cook")
-    cook.introduction()
-    cook.work()
+    println(cook.introduction())
+    cook.registerObserver(workObserver)
+    println(cook.work())
+    cook.notifyObservers()
 
     val child = humanFactory.createHuman("Child")
-    child.introduction()
-    child.work()
+    println(child.introduction())
+    child.registerObserver(workObserver)
+    println(child.work())
+    child.notifyObservers()
 
     val soldier = humanFactory.createHuman("Soldier")
-    soldier.introduction()
-    soldier.work()
+    println(soldier.introduction())
+    soldier.registerObserver(workObserver)
+    soldier.notifyObservers()
 }
